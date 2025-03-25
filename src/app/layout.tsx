@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Image from "next/image";
+import { Header } from "@/components/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,12 +26,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className='min-h-screen bg-white'>
+          <Header />
+          <main className=' mx-auto p-4'>
+            <div className='flex flex-col md:flex-row gap-8'>
+              <div className='md:w-1/2'>
+                <div className='relative w-full h-96 rounded-lg overflow-hidden shadow-lg'>
+                  <Image
+                    src='https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                    alt='Large Display'
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </div>
+              </div>
+              {children}
+            </div>
+          </main>
+        </div>
       </body>
     </html>
-  );
+  )
 }

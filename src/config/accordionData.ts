@@ -1,18 +1,54 @@
-export const accordionData = [
+// data/config.ts
+export const accordionItems = [
   {
-    id: 'q1',
-    title: 'Why is staying active important?',
+    id: 1,
+    title: 'I’d like to have a custom window expert call me',
     formConfig: {
-      requiredFields: ['firstName', 'lastName', 'phone'],
-      optionalFields: ['email']
+      fields: [
+        {
+          name: 'firstName',
+          label: 'First Name',
+          type: 'text',
+          required: true
+        },
+        { name: 'lastName', label: 'Last Name', type: 'text', required: true },
+        { name: 'email', label: 'Email', type: 'email', required: false },
+        { name: 'phone', label: 'Phone Number', type: 'tel', required: true }
+      ]
     }
   },
   {
-    id: 'q2',
-    title: 'How to eat healthy?',
+    id: 2,
+    title: 'I’d like to send information to my home buyer client',
     formConfig: {
-      requiredFields: ['firstName', 'lastName', 'phone'],
-      optionalFields: ['email']
+      fields: [
+        {
+          name: 'firstName',
+          label: 'First Name',
+          type: 'text',
+          required: true
+        },
+        { name: 'lastName', label: 'Last Name', type: 'text', required: true },
+        { name: 'email', label: 'Email', type: 'email', required: false },
+        { name: 'phone', label: 'Phone Number', type: 'tel', required: true }
+      ]
     }
-  }
+  },
+  // {
+  //   id: 3,
+  //   title: 'Statement 3',
+  //   formConfig: {
+  //     fields: [
+  //       {
+  //         name: 'firstName',
+  //         label: 'First Name',
+  //         type: 'text',
+  //         required: true
+  //       },
+  //       { name: 'lastName', label: 'Last Name', type: 'text', required: true },
+  //       { name: 'email', label: 'Email', type: 'email', required: false },
+  //       { name: 'phone', label: 'Phone Number', type: 'tel', required: true }
+  //     ]
+  //   }
+  // }
 ]
