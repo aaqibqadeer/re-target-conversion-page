@@ -27,9 +27,12 @@ export const Accordion: React.FC = () => {
   return (
     <div className='space-y-4'>
       {accordionItems.map((item: AccordionItem) => (
-        <div key={item.id} className='border rounded-lg overflow-hidden shadow'>
+        <div
+          key={item.id}
+          className='border rounded-3xl overflow-hidden shadow'
+        >
           <button
-            className='w-full text-left px-4 py-3 bg-orange-100 hover:bg-orange-200 focus:outline-none flex items-center'
+            className='w-full text-left px-4 py-3 block-color  focus:outline-none flex items-center'
             onClick={() => toggleItem(item.id)}
           >
             <svg
@@ -48,7 +51,7 @@ export const Accordion: React.FC = () => {
                 d='M19 9l-7 7-7-7'
               />
             </svg>
-            <span className='text-xl font-semibold'>{item.title}</span>
+            <span className='text-xl '>{item.title}</span>
           </button>
           {activeItem === item.id && (
             <div className='p-4 bg-white'>

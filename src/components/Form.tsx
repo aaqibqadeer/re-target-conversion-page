@@ -62,13 +62,13 @@ export const Form: React.FC<FormProps> = ({ formConfig }) => {
 
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
-      <h3 className='font-semibold'>
+      <h3 className=''>
         Input your name and mobile # and a rep will call you soon!
       </h3>
       {formConfig.fields.map((field) => (
         <div key={field.name}>
           <label
-            className='block text-lg font-medium mb-1'
+            className='block text-lg  mb-1'
             htmlFor={field.name}
           >
             {field.label}{' '}
@@ -80,7 +80,7 @@ export const Form: React.FC<FormProps> = ({ formConfig }) => {
             type={field.type}
             value={formData[field.name]}
             onChange={handleChange}
-            className='w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg'
+            className='w-full px-3 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg'
           />
           {errors[field.name] && (
             <p className='mt-1 text-red-600 text-sm'>{errors[field.name]}</p>
@@ -89,7 +89,7 @@ export const Form: React.FC<FormProps> = ({ formConfig }) => {
       ))}
       <button
         type='submit'
-        className='w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded text-xl'
+        className='w-full block-color py-2 px-4 rounded-3xl text-xl'
       >
         Submit
       </button>

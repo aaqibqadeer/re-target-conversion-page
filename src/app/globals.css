@@ -80,3 +80,22 @@
 body {
   font-size: 18px;
 }
+
+.block-color {
+  background-color: #2691D0;
+  color: white;
+}
+
+.block-color:hover {
+  background-color: #1679b1;
+}
+
+.scroll-container {
+  overflow-y: scroll;    
+  scrollbar-width: none;  
+  -ms-overflow-style: none; 
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}

@@ -28,14 +28,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-container`}
       >
-        <div className='min-h-screen bg-white'>
+        <div className='min-h-screen bg-white p-16'>
           <Header />
           <main className=' mx-auto p-4'>
             <div className='flex flex-col md:flex-row gap-8'>
               <div className='md:w-1/2'>
-                <div className='relative w-full h-96 rounded-lg overflow-hidden shadow-lg'>
+                <div className='relative w-full h-96 rounded-3xl overflow-hidden shadow-lg'>
                   <Image
                     src='https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
                     alt='Large Display'
