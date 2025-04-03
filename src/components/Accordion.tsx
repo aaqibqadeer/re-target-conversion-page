@@ -2,20 +2,8 @@
 
 import React, { useState } from 'react'
 import { accordionItems } from '@/config/accordionData'
-import {Form} from './Form'
-
-interface AccordionItem {
-  id: number
-  title: string
-  formConfig: {
-    fields: {
-      name: string
-      label: string
-      type: string
-      required: boolean
-    }[]
-  }
-}
+import { Form } from './Form'
+import { AccordionItem } from '@/config/accordionData'
 
 export const Accordion: React.FC = () => {
   const [activeItem, setActiveItem] = useState<number | null>(null)
@@ -55,7 +43,7 @@ export const Accordion: React.FC = () => {
           </button>
           {activeItem === item.id && (
             <div className='p-4 bg-white'>
-              <Form formConfig={item.formConfig} />
+              <Form item={item} />
             </div>
           )}
         </div>

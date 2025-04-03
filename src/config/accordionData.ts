@@ -3,54 +3,26 @@ export const accordionItems = [
   {
     id: 1,
     title: 'I’d like to have a custom window expert call me',
+    subheading: 'Input your name and mobile # and a rep will call you soon!',
     formConfig: {
       fields: [
-        // {
-        //   name: 'firstName',
-        //   label: 'First Name',
-        //   type: 'text',
-        //   required: true
-        // },
-        // { name: 'lastName', label: 'Last Name', type: 'text', required: true },
-        // { name: 'email', label: 'Email', type: 'email', required: false },
-        { name: 'name', label: 'Name', type: 'text', required: true },
-        { name: 'phone', label: 'Phone Number', type: 'tel', required: true }
+        { name: 'name', label: 'Name:', type: 'text', required: true },
+        { name: 'mobile', label: 'Mobile:', type: 'tel', required: true }
       ]
     }
   },
   {
     id: 2,
-    title: 'I’d like to send information to my home buyer client',
+    title: 'I’d like to send more info & a coupon to my clients',
+    subheading: 'Input your name and email and we will send you more info soon!',
     formConfig: {
       fields: [
-        // {
-        //   name: 'firstName',
-        //   label: 'First Name',
-        //   type: 'text',
-        //   required: true
-        // },
-        // { name: 'lastName', label: 'Last Name', type: 'text', required: true },
-        { name: 'name', label: 'Name', type: 'text', required: true },
-        { name: 'phone', label: 'Phone Number', type: 'tel', required: true },
-        { name: 'email', label: 'Email', type: 'email', required: false },
+        { name: 'name', label: 'Name:', type: 'text', required: true },
+        { name: 'email', label: 'Email:', type: 'email', required: true },
       ]
     }
   }
-  // {
-  //   id: 3,
-  //   title: 'Statement 3',
-  //   formConfig: {
-  //     fields: [
-  //       {
-  //         name: 'firstName',
-  //         label: 'First Name',
-  //         type: 'text',
-  //         required: true
-  //       },
-  //       { name: 'lastName', label: 'Last Name', type: 'text', required: true },
-  //       { name: 'email', label: 'Email', type: 'email', required: false },
-  //       { name: 'phone', label: 'Phone Number', type: 'tel', required: true }
-  //     ]
-  //   }
-  // }
 ]
+
+
+export type AccordionItem = (typeof accordionItems)[0]
