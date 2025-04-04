@@ -47,7 +47,7 @@ export const Form: React.FC<FormProps> = ({ item }) => {
 
     // Reset form
     setFormData(initialState)
-    router.push('/thank-you')
+    router.push(`/thank-you?page=${item.id}`)
   }
 
   return (

@@ -1,10 +1,18 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+"use client";
+
+import { accordionItems } from "@/config/accordionData"
+import { useSearchParams } from "next/navigation"
+
 export default function Home() {
+  const searchParams = useSearchParams()
+  const page = Number(searchParams.get('page') || 0)
+  const thankyouMessage = accordionItems[page-1]?.thankyouMessage || 'Thank you!'
+
   return (
     <div className='md:w-1/2'>
       <div className='p-6 rounded-lg text-center'>
-        <h2 className='text-3xl mb-6'>
-          Thank you! Someone will be calling you soon
-        </h2>
+        <h2 className='text-3xl mb-6'>{thankyouMessage}</h2>
         <div className='space-y-4'>
           <a
             href='https://gotchacovered.com'
