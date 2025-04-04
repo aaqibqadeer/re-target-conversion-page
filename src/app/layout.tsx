@@ -35,13 +35,17 @@ export default function RootLayout({
           <main className=' mx-auto p-4'>
             <div className='flex flex-col md:flex-row gap-8'>
               <div className='md:w-1/2'>
-                <div className='relative w-full h-96 rounded-3xl overflow-hidden shadow-lg'>
-                  <Image
-                    src='/images/property.jpg'
-                    alt='Property'
-                    layout='fill'
-                    objectFit='cover'
-                  />
+                <div className='relative w-full h-full rounded-3xl'>
+                    <Image
+                      src='/images/property.jpg'
+                      alt='Property'
+                      // layout='fill'
+                      width={670}
+                      height={487}
+                      objectFit='contain'
+                      className='rounded-3xl'
+                      
+                    />
                 </div>
               </div>
               {children}
